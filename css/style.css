@@ -1,0 +1,142 @@
+@import url(grid.css);
+@import url(Normalize.css);
+
+:root {
+  --clr-bg-light: #ffffff;
+  --clr-bg-body: #F2F2F2;
+  --clr-text: #111517;
+  --clr-search: #848484;
+
+  --border: rgba(0, 0, 0, 0.1);
+  /* --border: var(--clr-bg-light); */
+
+  --foreground: var(--clr-bg-light);
+  --background: var(--clr-bg-body);
+  
+  --fs-title: 18px;
+  --fs-description: 14px;
+  
+  --fw-800: 800;
+  --fw-600: 600;
+  --fw-400: 400;
+
+  --display: block;
+}
+
+.darkMode {
+  --clr-bg-light: #2B3844;
+  --clr-bg-body: #202C36;
+  --clr-text: #ffffff;
+  --clr-search: #ffffff;
+
+
+  --foreground: var(--clr-bg-light);
+  --background: var(--clr-bg-body);  
+}
+
+.displayBlock {
+  --display: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background);
+  font-family: sans-serif;
+}
+
+.container {
+  margin: auto;
+  padding: 0 1rem;
+  max-width: 1400px;
+  width: 90%;
+}
+
+
+/* * {
+  border: var(--border) 1px solid;
+} */
+
+.intro {
+  background-color: var(--foreground);
+}
+
+.header {
+  height: 80px;
+}
+
+.logo h3 {
+  font-size: 24px;
+  font-weight: var(--fw-800);
+  line-height: 33px;
+  color: var(--clr-text);
+}
+
+.dark-mode-toggle {
+  width: 105px;
+  cursor: pointer;
+}
+
+.moons {
+  width: 20px;
+  color: var(--ff--title);
+}
+
+.dark-mode-toggle h4 {
+  font-weight: var(--fw-600);
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--clr-text);
+}
+
+.search {
+  width: 480px;
+  height: 56px;
+  background-color: var(--foreground);
+  margin: 48px 0;
+}
+.search p {
+  position: absolute;
+  left: 200px;
+  width: 480px;
+  color: var(--clr-search);
+  display: var(--display);
+}
+
+.search .search-svg {
+  margin-left: 35px;
+  /* color: red; */
+}
+#search {
+  border: none;
+  padding: 18px;
+  width: 400px;
+  /* color: var(--clr-search); */
+  background-color: var(--foreground);
+
+}
+
+.grid {
+  grid-gap: 32px;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+}
+
+.flag {
+  width: 250px;
+  height: 336px;
+  background-color: var(--foreground);
+}
+
